@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+*.iml
+target
+node
+node_modules
+npm-debug.log
+docker/app-data/maven-repository
+src/main/resources/static/js/bower_components
+src/main/resources/static/js/gen/*.js
+src/main/resources/static/js/gen/*.js.map
+src/main/resources/static/js/gen/.module-cache

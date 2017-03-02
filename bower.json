@@ -1,0 +1,25 @@
+{
+  "name": "spring-react-starter-app-ui",
+  "authors": [
+    "Norman Atashbar <norman@atashbar.com>"
+  ],
+  "description": "UI for Spring React starter app",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "react": "^0.12.2",
+    "showdown": "^0.3.1",
+    "jquery": "^1.10.0",
+    "bootstrap": "^3.3.7"
+  }
+}

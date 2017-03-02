@@ -1,0 +1,22 @@
+starterapp:
+  build: .
+  dockerfile: docker/Dockerfile-dev
+  container_name: starterapp_container
+  ports:
+    - "8080:8080"
+  env_file: secure.env
+  environment:
+    - ENV=dev
+  links:
+    - starterapp_mysql:mysql
+
+starterapp_mysql:
+  build: .
+  dockerfile: docker/Dockerfile-mysql-dev
+  container_name: starterapp_mysql_container
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=mysqlrootpass
+  volumes:
+    - ./docker/db-data:/data

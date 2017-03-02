@@ -1,0 +1,10 @@
+FROM codolutions/springreactstarter_base:latest
+MAINTAINER codolutions
+
+ADD . /usr/local/starterapp
+RUN mkdir -p /root/.m2
+ADD ./docker/app-data/maven-repository /root/.m2/repository
+
+RUN cd /usr/local/starterapp && mvn clean install
+
+CMD cd /usr/local/starterapp && sleep 10 && ./run-local-web-server.sh
